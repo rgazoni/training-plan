@@ -1,14 +1,10 @@
 package io.spring.training.boot.trainingplan.domain;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-import org.springframework.stereotype.Repository;
+import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
 
-@Repository
+@Entity
 @Table
 public class Race {
 

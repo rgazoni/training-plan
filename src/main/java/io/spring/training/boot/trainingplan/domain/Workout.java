@@ -1,12 +1,11 @@
 package io.spring.training.boot.trainingplan.domain;
 
 import jakarta.persistence.*;
-import org.springframework.stereotype.Repository;
 
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 
-@Repository
+@Entity
 @Table
 public class Workout {
 
