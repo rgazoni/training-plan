@@ -13,14 +13,19 @@ public class Workout {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
+    @Column(nullable = false)
     private LocalDateTime date;
 
+    @Column(nullable = false)
     private String sport;
 
+    @Column(nullable = false)
     private String trainType;
 
+    @Column(nullable = false)
     private LocalTime duration;
 
+    @Column(nullable = false)
     private String distance;
 
     private String description;

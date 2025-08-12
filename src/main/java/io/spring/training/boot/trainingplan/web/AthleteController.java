@@ -2,7 +2,7 @@ package io.spring.training.boot.trainingplan.web;
 
 import io.spring.training.boot.trainingplan.domain.Athlete;
 import io.spring.training.boot.trainingplan.service.AthleteService;
-import io.spring.training.boot.trainingplan.web.dto.AthleteCreateDto;
+import io.spring.training.boot.trainingplan.web.dto.AthleteDto;
 import io.spring.training.boot.trainingplan.web.dto.AthleteResponseDto;
 import io.spring.training.boot.trainingplan.web.mapper.AthleteMapper;
 import org.springframework.http.ResponseEntity;
@@ -26,7 +26,7 @@ public class AthleteController {
     }
 
     @PostMapping("/")
-    public ResponseEntity<Void> create(@Validated @RequestBody AthleteCreateDto athlete) {
+    public ResponseEntity<Void> create(@Validated @RequestBody AthleteDto athlete) {
         Athlete athleteRequestEntity = mapper.toEntity(athlete);
         long id = service.create(athleteRequestEntity);
 
@@ -45,4 +45,27 @@ public class AthleteController {
     public AthleteResponseDto findById(@PathVariable long id) {
         return mapper.toDto(service.findById(id));
     }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Void> updateAthlete(@RequestBody AthleteDto newBody, @PathVariable long id) {
+        Athlete athlete = mapper.toEntity(newBody);
+        boolean isUpdated = service.updateAthlete(id, athlete);
+
+        URI location = ServletUriComponentsBuilder
+                .fromCurrentRequestUri()
+                .path("/{id}")
+                .buildAndExpand(id)
+                .toUri();
+
+        return isUpdated ?
+                ResponseEntity
+                        .noContent()
+                        .location(location)
+                        .build() :
+                ResponseEntity
+                        .created(location)
+                        .build();
+    }
+
+
 }

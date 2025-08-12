@@ -4,6 +4,8 @@ import io.spring.training.boot.trainingplan.domain.Athlete;
 import io.spring.training.boot.trainingplan.repositories.AthleteRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.concurrent.atomic.AtomicBoolean;
+
 @Service
 public class AthleteService {
 
@@ -28,6 +30,25 @@ public class AthleteService {
         return repository
                 .findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("Athlete didn't found."));
+    }
+
+    public boolean updateAthlete(long id, Athlete athlete) {
+
+        AtomicBoolean isUpdated = new AtomicBoolean(false);
+
+        repository.findById(id)
+                .map(person -> {
+                    person.setAge(athlete.getAge());
+                    person.setWeight(athlete.getWeight());
+                    person.setFirstName(athlete.getFirstName());
+                    person.setLastName(athlete.getLastName());
+                    person.setSocialIdentifier(athlete.getSocialIdentifier());
+                    isUpdated.set(true);
+                    return repository.save(person);
+                })
+                .orElseGet(() -> repository.save(athlete));
+
+        return isUpdated.get();
     }
 
 }
