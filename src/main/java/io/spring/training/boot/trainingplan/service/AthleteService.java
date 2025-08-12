@@ -51,4 +51,7 @@ public class AthleteService {
         return isUpdated.get();
     }
 
+    public void deleteAthlete(long id) {
+        repository.deleteById(id);
+    }
 }

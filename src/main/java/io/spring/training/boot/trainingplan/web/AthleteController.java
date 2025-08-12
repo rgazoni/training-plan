@@ -67,5 +67,12 @@ public class AthleteController {
                         .build();
     }
 
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteAthlete(@PathVariable long id) {
+        service.deleteAthlete(id);
+        return ResponseEntity
+                .noContent()
+                .build();
+    }
 
 }
