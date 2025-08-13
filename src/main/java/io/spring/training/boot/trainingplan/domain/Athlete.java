@@ -3,8 +3,10 @@ package io.spring.training.boot.trainingplan.domain;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.List;
+
 @Entity
-@Table
+@Table(name = "athlete")
 @Data
 public class Athlete {
 
@@ -26,4 +28,8 @@ public class Athlete {
 
     @Column(nullable = false)
     private Integer age;
+
+    @OneToMany(mappedBy = "athlete",
+    fetch = FetchType.LAZY)
+    private List<WorkoutAssignment> workoutAssignments;
 }

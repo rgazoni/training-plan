@@ -6,7 +6,7 @@ Spring Boot app to manage **triathlon athletes** and (soon) generate **scienceâ€
 
 ## Quick start
 
-**Prereqs:** Java 21+, Maven 4.0+
+**Pre reqs:** Java 21+, Maven 4.0+
 
 ```bash
 mvn spring-boot:run

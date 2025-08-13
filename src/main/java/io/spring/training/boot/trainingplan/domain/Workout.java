@@ -2,11 +2,11 @@ package io.spring.training.boot.trainingplan.domain;
 
 import jakarta.persistence.*;
 
-import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.util.List;
 
 @Entity
-@Table
+@Table(name = "workout")
 public class Workout {
 
     @Id
@@ -14,7 +14,7 @@ public class Workout {
     private long id;
 
     @Column(nullable = false)
-    private LocalDateTime date;
+    private String name;
 
     @Column(nullable = false)
     private String sport;
@@ -28,5 +28,11 @@ public class Workout {
     @Column(nullable = false)
     private String distance;
 
+    private short intensity;
+
     private String description;
+
+    @OneToMany(mappedBy = "workout",
+    fetch = FetchType.LAZY)
+    private List<WorkoutAssignment> workoutAssignmentList;
 }
