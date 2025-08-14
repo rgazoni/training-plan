@@ -6,7 +6,6 @@ import io.spring.training.boot.trainingplan.web.dto.AthleteDto;
 import io.spring.training.boot.trainingplan.web.dto.AthleteResponseDto;
 import io.spring.training.boot.trainingplan.web.mapper.AthleteMapper;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -15,7 +14,6 @@ import java.net.URI;
 
 @RestController
 @RequestMapping("athletes")
-@Controller
 public class AthleteController {
     private final AthleteService service;
     private final AthleteMapper mapper;

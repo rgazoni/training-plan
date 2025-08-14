@@ -1,5 +1,6 @@
 package io.spring.training.boot.trainingplan.domain;
 
+import io.spring.training.boot.trainingplan.domain.common.Sport;
 import jakarta.persistence.*;
 
 import java.time.LocalTime;
@@ -17,7 +18,8 @@ public class Workout {
     private String name;
 
     @Column(nullable = false)
-    private String sport;
+    @Enumerated(EnumType.STRING)
+    private Sport sport;
 
     @Column(nullable = false)
     private String trainType;
