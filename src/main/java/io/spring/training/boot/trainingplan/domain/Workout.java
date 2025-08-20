@@ -24,11 +24,11 @@ public class Workout {
     @Column(nullable = false)
     private String trainType;
 
-    @Column(nullable = false)
-    private LocalTime duration;
+    @Column(name = "duration_min")
+    private LocalTime durationMin;
 
-    @Column(nullable = false)
-    private String distance;
+    @Column(name = "distance_m")
+    private Integer distanceM;
 
     private short intensity;
 

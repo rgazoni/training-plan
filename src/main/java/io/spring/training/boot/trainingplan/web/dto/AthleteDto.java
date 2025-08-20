@@ -1,7 +1,6 @@
 package io.spring.training.boot.trainingplan.web.dto;
 
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Positive;
+import jakarta.validation.constraints.*;
 import org.hibernate.validator.constraints.br.CPF;
 
 public record AthleteDto(
@@ -10,12 +9,16 @@ public record AthleteDto(
         String cpf,
         @NotNull(message = "Weight mustn't be null.")
         @Positive
-        Double weight,
+        Double weightKg,
         @NotNull(message = "Age mustn't be null.")
         @Positive
+        @Min(15)
+        @Max(80)
         Integer age,
         @NotNull(message = "Firstname mustn't be null.")
+        @Size(min = 1, max = 50)
         String firstName,
         @NotNull(message = "Surname mustn't be null.")
+        @Size(min = 1, max = 50)
         String lastName
 ) {}
