@@ -39,7 +39,7 @@ public class AthleteService {
         repository.findById(id)
                 .map(person -> {
                     person.setAge(athlete.getAge());
-                    person.setWeight(athlete.getWeight());
+                    person.setWeightKg(athlete.getWeightKg());
                     person.setFirstName(athlete.getFirstName());
                     person.setLastName(athlete.getLastName());
                     person.setSocialIdentifier(athlete.getSocialIdentifier());

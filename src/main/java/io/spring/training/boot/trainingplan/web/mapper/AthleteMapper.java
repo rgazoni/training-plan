@@ -10,5 +10,6 @@ import org.mapstruct.Mapping;
 public interface AthleteMapper {
     @Mapping(target = "socialIdentifier", source = "cpf")
     Athlete toEntity(AthleteDto dto);
+    @Mapping(target = "cpf", source = "socialIdentifier")
     AthleteResponseDto toDto(Athlete entity);
 }
