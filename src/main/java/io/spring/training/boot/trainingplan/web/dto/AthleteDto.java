@@ -15,10 +15,10 @@ public record AthleteDto(
         @Min(15)
         @Max(80)
         Integer age,
-        @NotNull(message = "Firstname mustn't be null.")
+        @NotNull(message = "First name mustn't be null.")
         @Size(min = 1, max = 50)
         String firstName,
-        @NotNull(message = "Surname mustn't be null.")
+        @NotNull(message = "Last name mustn't be null.")
         @Size(min = 1, max = 50)
         String lastName
 ) {}

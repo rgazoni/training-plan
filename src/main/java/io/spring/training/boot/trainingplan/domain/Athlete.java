@@ -1,13 +1,18 @@
 package io.spring.training.boot.trainingplan.domain;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.*;
 
 import java.util.List;
 
+@Getter
+@Setter
+@ToString
+@Builder
+@NoArgsConstructor // Safe lombok and JPA interaction - Builder
+@AllArgsConstructor // Safe lombok and JPA interaction - Builder
 @Entity
 @Table(name = "athlete")
-@Data
 public class Athlete {
 
     @Id
@@ -24,12 +29,13 @@ public class Athlete {
     private String lastName;
 
     @Column(nullable = false)
-    private Double weight;
+    private Double weightKg;
 
     @Column(nullable = false)
     private Integer age;
 
     @OneToMany(mappedBy = "athlete",
     fetch = FetchType.LAZY)
+    @ToString.Exclude // Safe lombok jpa interaction - ToString
     private List<WorkoutAssignment> workoutAssignments;
 }
