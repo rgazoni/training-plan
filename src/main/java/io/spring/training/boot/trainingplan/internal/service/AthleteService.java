@@ -1,7 +1,7 @@
-package io.spring.training.boot.trainingplan.service;
+package io.spring.training.boot.trainingplan.internal.service;
 
-import io.spring.training.boot.trainingplan.domain.Athlete;
-import io.spring.training.boot.trainingplan.repositories.AthleteRepository;
+import io.spring.training.boot.trainingplan.internal.domain.Athlete;
+import io.spring.training.boot.trainingplan.internal.repositories.AthleteRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.concurrent.atomic.AtomicBoolean;

@@ -1,11 +1,17 @@
-package io.spring.training.boot.trainingplan.domain;
+package io.spring.training.boot.trainingplan.internal.domain;
 
-import io.spring.training.boot.trainingplan.domain.common.Sport;
+import io.spring.training.boot.trainingplan.internal.domain.common.Sport;
 import jakarta.persistence.*;
+import lombok.*;
 
 import java.time.LocalTime;
 import java.util.List;
 
+@Getter
+@ToString
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "workout")
 public class Workout {
@@ -34,7 +40,10 @@ public class Workout {
 
     private String description;
 
+    @Setter
     @OneToMany(mappedBy = "workout",
     fetch = FetchType.LAZY)
+    @ToString.Exclude
     private List<WorkoutAssignment> workoutAssignmentList;
+
 }

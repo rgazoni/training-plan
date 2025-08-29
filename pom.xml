@@ -10,7 +10,7 @@
     </parent>
     <groupId>io.spring.training.boot</groupId>
     <artifactId>training-plan</artifactId>
-    <version>0.0.4-SNAPSHOT</version>
+    <version>0.0.5-SNAPSHOT</version>
     <name>training-plan</name>
     <description>training-plan</description>
     <url/>
@@ -132,6 +132,11 @@
         </dependency>
         <dependency>
             <groupId>org.flywaydb</groupId>
+            <artifactId>flyway-core</artifactId>
+            <version>11.11.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.flywaydb</groupId>
             <artifactId>flyway-database-postgresql</artifactId>
             <version>11.11.2</version>
         </dependency>
@@ -187,7 +192,6 @@
                             <goal>verify</goal>
                         </goals>
                         <configuration>
-                            <groups>integration</groups>
                             <includes>
                                 <include>**/*IT.java</include>
                             </includes>
@@ -206,17 +210,6 @@
                             <artifactId>lombok</artifactId>
                         </exclude>
                     </excludes>
-                </configuration>
-            </plugin>
-
-            <plugin>
-                <groupId>org.flywaydb</groupId>
-                <artifactId>flyway-maven-plugin</artifactId>
-                <version>11.11.2</version>
-                <configuration>
-                    <configFiles>
-                        <configFile>src/main/resources/flyway.conf</configFile>
-                    </configFiles>
                 </configuration>
             </plugin>
         </plugins>

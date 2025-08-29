@@ -1,7 +1,7 @@
 package io.spring.training.boot.trainingplan.web;
 
-import io.spring.training.boot.trainingplan.domain.Athlete;
-import io.spring.training.boot.trainingplan.service.AthleteService;
+import io.spring.training.boot.trainingplan.internal.domain.Athlete;
+import io.spring.training.boot.trainingplan.internal.service.AthleteService;
 import io.spring.training.boot.trainingplan.web.mapper.AthleteMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
