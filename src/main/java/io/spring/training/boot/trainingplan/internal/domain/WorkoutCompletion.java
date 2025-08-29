@@ -1,4 +1,4 @@
-package io.spring.training.boot.trainingplan.domain;
+package io.spring.training.boot.trainingplan.internal.domain;
 
 import jakarta.persistence.*;
 

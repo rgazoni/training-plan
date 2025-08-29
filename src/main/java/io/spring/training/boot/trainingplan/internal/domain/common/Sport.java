@@ -1,4 +1,4 @@
-package io.spring.training.boot.trainingplan.domain.common;
+package io.spring.training.boot.trainingplan.internal.domain.common;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 

@@ -1,7 +1,7 @@
 package io.spring.training.boot.trainingplan.web;
 
-import io.spring.training.boot.trainingplan.domain.Athlete;
-import io.spring.training.boot.trainingplan.service.AthleteService;
+import io.spring.training.boot.trainingplan.internal.domain.Athlete;
+import io.spring.training.boot.trainingplan.internal.service.AthleteService;
 import io.spring.training.boot.trainingplan.web.dto.AthleteDto;
 import io.spring.training.boot.trainingplan.web.dto.AthleteResponseDto;
 import io.spring.training.boot.trainingplan.web.mapper.AthleteMapper;

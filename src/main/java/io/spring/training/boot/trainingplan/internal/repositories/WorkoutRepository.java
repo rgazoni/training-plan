@@ -1,6 +1,6 @@
-package io.spring.training.boot.trainingplan.repositories;
+package io.spring.training.boot.trainingplan.internal.repositories;
 
-import io.spring.training.boot.trainingplan.domain.Workout;
+import io.spring.training.boot.trainingplan.internal.domain.Workout;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface WorkoutRepository extends JpaRepository<Workout, Long> {

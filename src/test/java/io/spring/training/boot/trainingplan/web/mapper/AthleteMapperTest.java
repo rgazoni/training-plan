@@ -1,6 +1,6 @@
 package io.spring.training.boot.trainingplan.web.mapper;
 
-import io.spring.training.boot.trainingplan.domain.Athlete;
+import io.spring.training.boot.trainingplan.internal.domain.Athlete;
 import io.spring.training.boot.trainingplan.web.dto.AthleteDto;
 import org.junit.jupiter.api.Test;
 import org.mapstruct.factory.Mappers;

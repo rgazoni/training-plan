@@ -1,7 +1,7 @@
-package io.spring.training.boot.trainingplan.service;
+package io.spring.training.boot.trainingplan.internal.service;
 
-import io.spring.training.boot.trainingplan.domain.Workout;
-import io.spring.training.boot.trainingplan.repositories.WorkoutRepository;
+import io.spring.training.boot.trainingplan.internal.domain.Workout;
+import io.spring.training.boot.trainingplan.internal.repositories.WorkoutRepository;
 import org.springframework.stereotype.Service;
 
 @Service
