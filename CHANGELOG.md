@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Created a package named config, in order to store application configs
 - Created a configuration initialization file for flyway named `FlywayInit`. It initializes and migrate scripts after application ctx is set up - uses `@PostConstruct` to achieve that.
 - Followed flyway doc for Java API https://documentation.red-gate.com/fd/api-hooks-277579366.html
+- Created an integration test to certified that changes in structure were made correctly
 
 ### Changed
 - Configured flyway on a local properties file
