@@ -3,6 +3,7 @@ package io.spring.training.boot.trainingplan.repositories;
 import io.spring.training.boot.trainingplan.internal.domain.Workout;
 import io.spring.training.boot.trainingplan.internal.domain.common.Sport;
 import io.spring.training.boot.trainingplan.internal.repositories.WorkoutRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
@@ -14,6 +15,7 @@ import java.util.Optional;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 
+@Slf4j
 @DataJpaTest
 public class WorkoutRepositoryIT {
 
@@ -23,7 +25,7 @@ public class WorkoutRepositoryIT {
     WorkoutRepository wr;
 
     @Test
-    void savesWorkout_andCheckDataIntegrity() {
+    void savesWorkout_andCompareId() {
         Workout workout = persistValidWorkout();
 
         Optional<Workout> found = wr.findById(workout.getId());
@@ -31,6 +33,15 @@ public class WorkoutRepositoryIT {
         assertThat(found).isPresent().get()
                 .extracting(Workout::getId).isEqualTo(workout.getId());
 
+    }
+
+    @Test
+    void savesWorkout_andCheckIfItExistsByName() {
+        Workout workout = persistValidWorkout();
+
+        boolean exists = wr.existsByName(workout.getName());
+
+        assertThat(exists).isTrue();
     }
 
     private Workout persistValidWorkout() {
@@ -45,6 +56,7 @@ public class WorkoutRepositoryIT {
                 .build();
 
         em.persistAndFlush(workout);
+        log.info(String.format("TEST: The workout persisted correctly. Id: %d, Name: %s, Desc: %s", workout.getId(), workout.getName(), workout.getDescription()));
         return workout;
     }
 
