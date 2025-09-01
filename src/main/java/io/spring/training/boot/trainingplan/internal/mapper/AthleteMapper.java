@@ -1,8 +1,8 @@
-package io.spring.training.boot.trainingplan.web.mapper;
+package io.spring.training.boot.trainingplan.internal.mapper;
 
 import io.spring.training.boot.trainingplan.internal.domain.Athlete;
-import io.spring.training.boot.trainingplan.web.dto.AthleteDto;
-import io.spring.training.boot.trainingplan.web.dto.AthleteResponseDto;
+import io.spring.training.boot.trainingplan.internal.dto.AthleteDto;
+import io.spring.training.boot.trainingplan.internal.dto.AthleteResponseDto;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 

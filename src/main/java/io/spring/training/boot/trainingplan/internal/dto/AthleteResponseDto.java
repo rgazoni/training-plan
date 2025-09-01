@@ -1,4 +1,4 @@
-package io.spring.training.boot.trainingplan.web.dto;
+package io.spring.training.boot.trainingplan.internal.dto;
 
 public record AthleteResponseDto(
         long id,

@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Created integration tests to assure that workout repo is functional `WorkoutRepositoryIT`.
 
 ### Changed
+- Changed packages `dto` and `mapper` to internal package, in order to keep these responsibilities into domain hands and not the presentation layer.
 
 ### Removed
 

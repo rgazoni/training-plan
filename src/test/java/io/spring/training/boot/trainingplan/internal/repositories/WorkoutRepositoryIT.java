@@ -1,4 +1,4 @@
-package io.spring.training.boot.trainingplan.repositories;
+package io.spring.training.boot.trainingplan.internal.repositories;
 
 import io.spring.training.boot.trainingplan.internal.domain.Workout;
 import io.spring.training.boot.trainingplan.internal.domain.common.Sport;

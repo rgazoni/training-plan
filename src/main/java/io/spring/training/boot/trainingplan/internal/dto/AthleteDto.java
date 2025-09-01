@@ -1,4 +1,4 @@
-package io.spring.training.boot.trainingplan.web.dto;
+package io.spring.training.boot.trainingplan.internal.dto;
 
 import jakarta.validation.constraints.*;
 import org.hibernate.validator.constraints.br.CPF;
