@@ -10,9 +10,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Created a repository for workout `WorkoutRepository`.
 - Created integration tests to assure that workout repo is functional `WorkoutRepositoryIT`.
+- Created tests for mapping a WorkoutDto to Workout entity `WorkoutMapperTest`
+- Created Mapper for Workout logic and the Dto.
 
 ### Changed
 - Changed packages `dto` and `mapper` to internal package, in order to keep these responsibilities into domain hands and not the presentation layer.
+- Changed durationMin Workout type from LocalTime to Duration.
 
 ### Removed
 

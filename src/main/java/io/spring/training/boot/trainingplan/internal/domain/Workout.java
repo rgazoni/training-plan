@@ -4,7 +4,7 @@ import io.spring.training.boot.trainingplan.internal.domain.common.Sport;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.time.LocalTime;
+import java.time.Duration;
 import java.util.List;
 
 @Getter
@@ -31,7 +31,7 @@ public class Workout {
     private String trainType;
 
     @Column(name = "duration_min")
-    private LocalTime durationMin;
+    private Duration durationMin;
 
     @Column(name = "distance_m")
     private Integer distanceM;

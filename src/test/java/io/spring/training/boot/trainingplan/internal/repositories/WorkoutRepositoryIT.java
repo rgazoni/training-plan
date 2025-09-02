@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 
+import java.time.Duration;
 import java.time.LocalTime;
 import java.util.Optional;
 
@@ -49,7 +50,7 @@ public class WorkoutRepositoryIT {
                 .name("Lactate Threshold Test (LT Test)")
                 .sport(Sport.RUN)
                 .trainType("TEST")
-                .durationMin(LocalTime.of(0, 45, 0))
+                .durationMin(Duration.parse("PT1H30M"))
                 .distanceM(8000)
                 .intensity((short) 10)
                 .description("This exercise has the goal of determine someone's training zones")
