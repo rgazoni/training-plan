@@ -1,4 +1,4 @@
-package io.spring.training.boot.trainingplan.internal.mapper;
+package io.spring.training.boot.trainingplan.internal.mappers;
 
 import io.spring.training.boot.trainingplan.internal.domain.Athlete;
 import io.spring.training.boot.trainingplan.internal.dto.AthleteDto;

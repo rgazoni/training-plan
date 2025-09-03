@@ -1,10 +1,10 @@
 package io.spring.training.boot.trainingplan.web;
 
 import io.spring.training.boot.trainingplan.internal.domain.Athlete;
-import io.spring.training.boot.trainingplan.internal.service.AthleteService;
+import io.spring.training.boot.trainingplan.internal.services.AthleteService;
 import io.spring.training.boot.trainingplan.internal.dto.AthleteDto;
 import io.spring.training.boot.trainingplan.internal.dto.AthleteResponseDto;
-import io.spring.training.boot.trainingplan.internal.mapper.AthleteMapper;
+import io.spring.training.boot.trainingplan.internal.mappers.AthleteMapper;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;

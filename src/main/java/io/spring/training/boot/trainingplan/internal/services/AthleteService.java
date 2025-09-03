@@ -1,4 +1,4 @@
-package io.spring.training.boot.trainingplan.internal.service;
+package io.spring.training.boot.trainingplan.internal.services;
 
 import io.spring.training.boot.trainingplan.internal.domain.Athlete;
 import io.spring.training.boot.trainingplan.internal.repositories.AthleteRepository;

@@ -1,8 +1,7 @@
-package io.spring.training.boot.trainingplan.internal.mapper;
+package io.spring.training.boot.trainingplan.internal.mappers;
 
 import io.spring.training.boot.trainingplan.internal.domain.Athlete;
 import io.spring.training.boot.trainingplan.internal.dto.AthleteDto;
-import io.spring.training.boot.trainingplan.internal.mapper.AthleteMapper;
 import org.junit.jupiter.api.Test;
 import org.mapstruct.factory.Mappers;
 

@@ -1,8 +1,8 @@
 package io.spring.training.boot.trainingplan.web;
 
 import io.spring.training.boot.trainingplan.internal.domain.Athlete;
-import io.spring.training.boot.trainingplan.internal.service.AthleteService;
-import io.spring.training.boot.trainingplan.internal.mapper.AthleteMapper;
+import io.spring.training.boot.trainingplan.internal.services.AthleteService;
+import io.spring.training.boot.trainingplan.internal.mappers.AthleteMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
